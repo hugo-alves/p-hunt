@@ -1,0 +1,13 @@
+<%= form_for Problem.new do |p| %>
+<%= p.label :name %>
+<%= p.text_field :name %>
+<%= p.label :email %>
+<%= p.text_field :email %>
+<%= p.label :title %>
+<%= p.text_field :title %>
+<%= p.label :description %>
+<%= p.text_field :description %>
+<%= p.submit %>
+
+
+<% end %>

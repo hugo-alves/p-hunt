@@ -13,7 +13,9 @@ class ProblemsController < ApplicationController
   end
 
   def create
-
+    @problem = Problem.new(problem_params)
+    @problem.save
+    redirect_to root_path
   end
 
   private
@@ -23,7 +25,7 @@ class ProblemsController < ApplicationController
   end
 
   def problem_params
-    params.require(:problems).permit(:name, :title, :email, :description)
+    params.require(:problem).permit(:name, :title, :email, :description)
   end
 
 end

@@ -1,0 +1,15 @@
+<h1>Problems index</h1>
+
+<div class="container">
+<% @problems.each do |p| %>
+  <!-- Criar partial depois com cards -->
+
+    <div class="card">
+      <h2><%= p.title %></h2>
+      <p><%= p.description %></p>
+
+      <p>Author: <%= p.name %></p>
+    </div>
+
+<% end %>
+</div>

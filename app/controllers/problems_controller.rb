@@ -5,7 +5,7 @@ class ProblemsController < ApplicationController
   end
 
   def index
-
+    @problems = Problem.all
   end
 
   def new

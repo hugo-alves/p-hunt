@@ -12,4 +12,18 @@
  *
  *= require_tree .
  *= require_self
+ *= require material
  */
+
+ .card-wide.mdl-card {
+   width: 512px;
+   padding-bottom: 50px;
+ }
+ .card-wide > .mdl-card__title {
+   color: #fff;
+   height: 176px;
+   background: url("hitler.jpg") center / cover;
+ }
+ .card-wide > .mdl-card__menu {
+   color: #fff;
+ }

@@ -7,7 +7,6 @@
   align-items: center;
   padding: 0px;
   border-radius: 3px;
-  transition: all 0.15s ease;
 }
 
 /* Body design */
@@ -23,13 +22,6 @@
   font-weight: lighter;
   color: #999999;
   margin-bottom: 0;
-}
-
-/* problem image */
-.problem-image {
-  border-radius: 10px;
-  margin-right: 20px;
-  width: 175px;
 }
 
 /* Upvote design */
@@ -57,30 +49,9 @@
 }
 
 /* Controls design */
-.problem-controls {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin: 0px;
-}
-.problem-controls a {
-  padding: 0 20px;
-  font-size: 17px;
-  color: #E6E6E6;
-}
-.problem-controls a:hover {
-  color: #D3473C !important
-}
-.problem-controls-hidden a {
-  color: transparent;
-  font-size: 15px;
-  transition: all 0.15s ease;
-  border-color: transparent;
-}
 
 /* Hover effects */
 .problem:hover {
-  background: #f7f7fa;
   cursor: pointer;
 }
 .problem-upvote:hover, .problem-upvote.problem-upvote-upvoted {
@@ -90,6 +61,3 @@
 .problem-upvote-upvoted .problem-arrow {
   border-bottom-color: #5898f1;
 }
-// .problem:hover .problem-upvote { transform: scale(1.2) }
-.problem:hover .problem-controls-hidden a { color: #E6E6E6 }
-.problem-upvote:hover .problem-arrow { border-bottom: 9px solid #5898f1 }

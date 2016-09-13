@@ -2,7 +2,11 @@
 <h1 class="text-center">PROBLEMS EVERYWHERE</h1>
 
 <div class="container">
-  <%= react_component "ProblemList",
-      render(template: 'problems/index.json.jbuilder'),
-      prerender: false %>
+  <div class="row">
+    <div class="col-xs-12">
+      <%= react_component "ProblemList",
+          render(template: 'problems/index.json.jbuilder'),
+          prerender: false %>
+    </div>
+  </div>
 </div>

@@ -13,9 +13,7 @@ var ProblemListItem = React.createClass({
         <p>{this.props.problem.name}</p>
       </div>
       <div className="mdl-card__menu">
-        <button className="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-          <i className="material-icons">share</i>
-        </button>
+        <a><i className="material-icons">share</i></a>
       </div>
     </div>
     </div>

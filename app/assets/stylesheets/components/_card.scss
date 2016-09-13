@@ -3,9 +3,10 @@
    width: 100%;
    padding-bottom: 50px;
  }
- .card-wide > .mdl-card__title {
+.mdl-card__title {
    color: #fff;
-   height: 176px;
+   display: flex;
+   justify-content: space-between;
    /*background: url("hitler.jpg") center / cover;*/
  }
  .card-wide > .mdl-card__menu {

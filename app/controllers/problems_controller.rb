@@ -19,6 +19,10 @@ class ProblemsController < ApplicationController
     redirect_to root_path
   end
 
+  def upvote
+    @problem = Problem.find(params[:id])
+  end
+
   private
 
   def set_problem

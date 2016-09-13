@@ -1,17 +1,21 @@
-<h1>Problem Show</h1>
-
 <div class="container">
-
-    <div class="card">
-      <h2><%= @problem.title %></h2>
-      <p><%= @problem.description %></p>
-
-      <p>Author: <%= @problem.name %></p>
+<div class=col-md-3></div>
+  <div class="col-md-6">
+      <div class="card-problem">
+        <h1><%= @problem.title %></h1>
+        <div class=description>
+        <p><%= @problem.description %></p>
+        </div>
+      <div class="author">
+        <p>Author: <%= @problem.name %></p>
+      </div>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+  <a href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" title="Share via Whatsapp" target="_blank" class="btn btn-whatsapp"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+      <a href="http://twitter.com/home?status=This is a real problem:<%= @problem.title %>! Take a look on <%=request.original_url%>" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
     </div>
 <!-- Comment Plugin comment-box -->
     <div class="fb-comments" data-numposts="5"></div>
 </div>
-
 <!-- Facebook SDK so that the plugin works-->
 <% content_for(:after_js) do %>
 
@@ -24,3 +28,4 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 <% end %>
+</div>

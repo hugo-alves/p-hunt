@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913124221) do
+ActiveRecord::Schema.define(version: 20160913164211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,9 +21,18 @@ ActiveRecord::Schema.define(version: 20160913124221) do
     t.string   "title"
     t.string   "description"
     t.string   "email"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "cached_votes_total", default: 0
+    t.integer  "cached_votes_score", default: 0
+    t.integer  "cached_votes_up",    default: 0
+    t.integer  "cached_votes_down",  default: 0
   end
+
+  add_index "problems", ["cached_votes_down"], name: "index_problems_on_cached_votes_down", using: :btree
+  add_index "problems", ["cached_votes_score"], name: "index_problems_on_cached_votes_score", using: :btree
+  add_index "problems", ["cached_votes_total"], name: "index_problems_on_cached_votes_total", using: :btree
+  add_index "problems", ["cached_votes_up"], name: "index_problems_on_cached_votes_up", using: :btree
 
   create_table "votes", force: :cascade do |t|
     t.integer  "votable_id"

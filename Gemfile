@@ -36,6 +36,9 @@ gem 'material_design_lite-rails', '~> 1.2'
 gem 'js-routes', '~> 1.3'
 gem 'react-rails', '~> 1.8'
 gem 'acts_as_votable'
+gem "bootstrap-sass"
+gem "font-awesome-sass"
+gem "autoprefixer-rails"
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-classnames'

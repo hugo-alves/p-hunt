@@ -1,15 +1,13 @@
 var ProblemListItem = React.createClass({
   render: function() {
     return (
-      <div className="problem card-wide mdl-card mdl-shadow--2dp">
-      <div className="problem-upvote">
-        <Upvote problem={this.props.problem} />
-      </div>
+    <div className="wrapper">
+    <div className="problem-upvote">
+      <Upvote problem={this.props.problem} />
+    </div>
+    <div className="problem mdl-card mdl-shadow--2dp">
       <div className="mdl-card__title">
-        <h2 className="mdl-card__title-text">{this.props.problem.title}</h2>
-      </div>
-      <div className="mdl-card__supporting-text">
-        <p>{this.props.problem.description}</p>
+        <a href={Routes.problem_path(this.props.problem)} >{this.props.problem.title}</a>
       </div>
       <div className="mdl-card__actions mdl-card--border">
         <p>{this.props.problem.name}</p>
@@ -19,6 +17,7 @@ var ProblemListItem = React.createClass({
           <i className="material-icons">share</i>
         </button>
       </div>
+    </div>
     </div>
     );
   }

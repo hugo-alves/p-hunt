@@ -1,12 +1,14 @@
 .card-wide.mdl-card {
    width: 100%;
    padding-bottom: 50px;
+   margin-bottom: 4px;
  }
 .mdl-card__title {
    color: #fff;
    display: flex;
    justify-content: space-between;
-   /*background: url("hitler.jpg") center / cover;*/
+   padding-top: 5px;
+   padding-bottom: 5px;
  }
  .card-wide > .mdl-card__menu {
    color: #fff;

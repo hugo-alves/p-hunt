@@ -11,7 +11,10 @@ var ProblemListItem = React.createClass({
         <a><i className="material-icons">share</i></a>
       </div>
       <div className="mdl-card__actions mdl-card--border">
-        <p>{this.props.problem.name}</p>
+      <p>{this.props.problem.description}</p>
+      <footer>
+        <p>By: {this.props.problem.name}</p>
+        </footer>
       </div>
     </div>
     </div>

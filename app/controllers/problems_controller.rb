@@ -22,7 +22,8 @@ class ProblemsController < ApplicationController
   def upvote
     @problem = Problem.find(params[:id])
     session[:voting_id] = request.remote_ip
-    @voter = VotingSession.find_or_create_by_ip(session[:voting_id])
+    # byebug
+    @voter = VotingSession.find_or_create_by(ip: session[:voting_id])
     if @voter.voted_for? @problem
       @voter.unvote_for @problem
     else

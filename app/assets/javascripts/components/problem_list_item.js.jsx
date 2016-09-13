@@ -6,7 +6,7 @@ var ProblemListItem = React.createClass({
         <Upvote problem={this.props.problem} />
       </div>
       <div className="mdl-card__title">
-        <h2 className="mdl-card__title-text">{this.props.problem.title}</h2>
+        <a href={Routes.problem_path(this.props.problem)} target="_blank">{this.props.problem.title}</a>
       </div>
       <div className="mdl-card__supporting-text">
         <p>{this.props.problem.description}</p>

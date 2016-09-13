@@ -8,14 +8,13 @@ var ProblemListItem = React.createClass({
     <div className="problem mdl-card mdl-shadow--2dp">
       <div className="mdl-card__title">
         <a href={Routes.problem_path(this.props.problem)} >{this.props.problem.title}</a>
+        <a><i className="material-icons">share</i></a>
       </div>
       <div className="mdl-card__actions mdl-card--border">
-        <p>{this.props.problem.name}</p>
-      </div>
-      <div className="mdl-card__menu">
-        <button className="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-          <i className="material-icons">share</i>
-        </button>
+      <p>{this.props.problem.description}</p>
+      <footer>
+        <p>By: {this.props.problem.name}</p>
+        </footer>
       </div>
     </div>
     </div>

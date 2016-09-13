@@ -1,4 +1,5 @@
 class ProblemsController < ApplicationController
+  before_action :set_problem, only: [:show, :destroy]
 
   def show
 
@@ -21,7 +22,7 @@ class ProblemsController < ApplicationController
   private
 
   def set_problem
-
+    @problem = Problem.find(params[:id])
   end
 
   def problem_params

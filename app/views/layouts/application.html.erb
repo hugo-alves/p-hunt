@@ -9,7 +9,9 @@
 </head>
 <body>
 <!-- Facebook SDK -->
- <%= window.fbAsyncInit = function() {
+
+<script>
+window.fbAsyncInit = function() {
     FB.init({
       appId      : '1417815691569028',
       xfbml      : true,
@@ -23,10 +25,7 @@
      js = d.createElement(s); js.id = id;
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk')); %>
-
-<script>
-
+   }(document, 'script', 'facebook-jssdk'));
 </script>
 <%= yield %>
 

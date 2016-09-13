@@ -3,13 +3,13 @@
 <div class="container">
 
     <div class="card">
-      <h2><%= p.title %></h2>
-      <p><%= p.description %></p>
+      <h2><%= @problem.title %></h2>
+      <p><%= @problem.description %></p>
 
-      <p>Author: <%= p.name %></p>
+      <p>Author: <%= @problem.name %></p>
     </div>
 <!-- Comment Plugin comment-box -->
-    <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="8"></div>
+    <div class="fb-comments" data-href="<%=request.original_url %>" data-numposts="8"></div>
 </div>
 
 <!-- Facebook SDK so that the plugin works-->

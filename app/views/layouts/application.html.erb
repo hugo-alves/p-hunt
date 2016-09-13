@@ -5,12 +5,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <meta property="og:url"                content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
-  <meta property="og:type"               content="article" />
-  <meta property="og:title"              content="When Great Minds Don’t Think Alike" />
-  <meta property="og:description"        content="How much does culture influence creative thinking?" />
+  <meta property="og:url"                content="<%= request.original_url %>">
   <meta property="fb:app_id"             content="1417815691569028" />
-
+  <meta property="og:title"              content="<%= @problem.title %>" />
+  <meta property="og:type"               content="article" />
+  <meta property="og:published_time"     content="<%= @problem.created_at.strftime('%Y-%m-%d %H:%M') %>" />
   <%= csrf_meta_tags %>
 </head>
 <body>

@@ -36,6 +36,13 @@ gem "binding_of_caller"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'js-routes', '~> 1.3'
+gem 'react-rails', '~> 1.8'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-classnames'
+end
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,7 +55,7 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  
+
   gem "better_errors"
   gem "binding_of_caller"
 end

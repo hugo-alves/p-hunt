@@ -1,9 +1,8 @@
-<h1>PROBLEMS</h1>
-<h1>PROBLEMS EVERYWHERE</h1>
+<h1 class="text-center">PROBLEMS</h1>
+<h1 class="text-center">PROBLEMS EVERYWHERE</h1>
 
-
-<%= react_component "ProblemList",
+<div class="container">
+  <%= react_component "ProblemList",
       render(template: 'problems/index.json.jbuilder'),
       prerender: false %>
-
-
+</div>

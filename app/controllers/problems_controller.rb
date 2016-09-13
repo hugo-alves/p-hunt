@@ -19,6 +19,17 @@ class ProblemsController < ApplicationController
     redirect_to root_path
   end
 
+  def upvote
+    @problem = Problem.find(params[:id])
+    session[:voting_id] = request.remote_ip
+    @voter = VotingSession.find_or_create_by(ip: session[:voting_id])
+    if @voter.voted_for? @problem
+      @voter.unvote_for @problem
+    else
+      @voter.up_votes @problem
+    end
+  end
+
   private
 
   def set_problem

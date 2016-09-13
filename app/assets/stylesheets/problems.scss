@@ -1,3 +1,94 @@
 // Place all the styles related to the problems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.problem {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+}
+
+/* Body design */
+.problem-body {
+  flex: 1 1 auto;
+}
+.problem-body h3 {
+  font-weight: bold;
+  font-size: 23px;
+  margin-top: 0;
+}
+.problem-body p {
+  font-weight: lighter;
+  color: #999999;
+  margin-bottom: 0;
+}
+
+/* problem image */
+.problem-image {
+  border-radius: 10px;
+  margin-right: 20px;
+  width: 175px;
+}
+
+/* Upvote design */
+.problem-upvote {
+  padding-right: 20px;
+  text-align: center;
+  transition: all 0.15s ease;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+}
+.problem-count {
+  margin: 2px 0 0;
+}
+.problem-arrow {
+  transition: all 0.15s ease;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid transparent;
+  border-bottom: 9px solid black;
+  border-radius: 2px;
+  margin: auto;
+}
+
+/* Controls design */
+.problem-controls {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+}
+.problem-controls a {
+  padding: 0 20px;
+  font-size: 17px;
+  color: #E6E6E6;
+}
+.problem-controls a:hover {
+  color: #D3473C !important
+}
+.problem-controls-hidden a {
+  color: transparent;
+  font-size: 15px;
+  transition: all 0.15s ease;
+  border-color: transparent;
+}
+
+/* Hover effects */
+.problem:hover {
+  background: #f7f7fa;
+  cursor: pointer;
+}
+.problem-upvote:hover, .problem-upvote.problem-upvote-upvoted {
+  color: #5898f1;
+  cursor: pointer;
+}
+.problem-upvote-upvoted .problem-arrow {
+  border-bottom-color: #5898f1;
+}
+// .problem:hover .problem-upvote { transform: scale(1.2) }
+.problem:hover .problem-controls-hidden a { color: #E6E6E6 }
+.problem-upvote:hover .problem-arrow { border-bottom: 9px solid #5898f1 }

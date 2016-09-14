@@ -1,24 +1,24 @@
 <%= form_for Problem.new do |p| %>
   <div class="form-wrapper mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <%= p.text_field :name, class: "mdl-textfield__input" %>
-    <%= p.label :name, class: "mdl-textfield__label" %>
-  </div>
-  <br />
-  <div class="form-wrapper mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <%= p.text_field :email, class: "mdl-textfield__input" %>
-    <%= p.label :email, class: "mdl-textfield__label" %>
-  </div>
-  <br />
-  <div class="form-wrapper mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <%= p.text_field :title, class: "mdl-textfield__input" %>
     <%= p.label :title, class: "mdl-textfield__label" %>
   </div>
-  <br />
+  <br>
   <div class="form-wrapper mdl-textfield mdl-js-textfield">
     <%= p.text_area :description,class: "mdl-textfield__input", rows: "10" %>
     <%= p.label :description, class: "mdl-textfield__label" %>
   </div>
-  <br />
+  <br>
+  <div class="form-wrapper mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= p.text_field :name, class: "mdl-textfield__input" %>
+    <%= p.label :name, class: "mdl-textfield__label" %>
+  </div>
+  <br>
+  <div class="form-wrapper mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <%= p.text_field :email, class: "mdl-textfield__input" %>
+    <%= p.label :email, class: "mdl-textfield__label" %>
+  </div>
+  <br>
   <div>
     <%= p.submit class:"mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" %>
   </div>

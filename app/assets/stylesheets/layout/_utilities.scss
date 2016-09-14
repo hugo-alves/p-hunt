@@ -27,10 +27,18 @@
 a {
   style: none;
 }
-
-.container {
-  background-color: #FFF;
-}
 .form-wrapper {
   width: 80% !important;
+}
+.show-wrapper {
+  margin: 30px auto;
+  .container {
+  background-color: #FFF !important;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  padding-bottom: 10px;
+  .row {
+    padding-bottom: 20px;
+  }
+  };
 }

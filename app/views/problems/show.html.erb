@@ -1,19 +1,18 @@
-<div class="container">
-  <div class=col-md-3></div>
-    <div class="col-md-6">
-        <div class="card-problem">
-          <h1><%= @problem.title %></h1>
-          <div class=description>
-          <p><%= @problem.description %></p>
-          </div>
-        <div class="author">
-          <p>Author: <%= @problem.name %></p>
-        </div>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=<%=request.original_url%>" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+<div class="show-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-md-offset-3">
+        <h1><%= @problem.title %></h1>
+        <p class="description"><%= @problem.description %></p>
+        <p class="author">Author: <%= @problem.name %></p>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
         <a href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" title="Share via Whatsapp" target="_blank" class="btn btn-whatsapp"><i class="fa fa-whatsapp"></i> WhatsApp</a>
         <a href="http://twitter.com/home?status=This is a real problem:<%= @problem.title %>! Take a look on <%=request.original_url%>" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
-      </div>
+
   <!-- Comment Plugin comment-box -->
-      <div class="fb-comments" data-numposts="5"></div>
+        <div class="fb-comments" data-numposts="5"></div>
+        <%= link_to "Back", :back, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+      </div>
+    </div>
   </div>
 </div>

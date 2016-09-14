@@ -14,7 +14,7 @@
       <a href="http://twitter.com/home?status=This is a real problem:<%= @problem.title %>! Take a look on <%=request.original_url%>" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
     </div>
 <!-- Comment Plugin comment-box -->
-    <div class="fb-comments" data-numposts="5"></div>
+    <div class="fb-comments" data-href="<%= request.original_url %>" data-numposts="5"></div>
 </div>
 <!-- Facebook SDK so that the plugin works-->
 <% content_for(:after_js) do %>

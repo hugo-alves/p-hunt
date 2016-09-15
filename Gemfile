@@ -36,7 +36,6 @@ gem 'materialize-sass'
 gem 'js-routes', '~> 1.3'
 gem 'react-rails', '~> 1.8'
 gem 'acts_as_votable'
-gem "bootstrap-sass"
 gem "font-awesome-sass"
 gem "autoprefixer-rails"
 

@@ -1,16 +1,12 @@
 <%= image_tag("problems.jpg", :class => "img_problems") %>
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
+<div class="box">
+  <div class="mdl-grid">
+    <div class="mdl-cell--12-col">
       <%= react_component "ProblemList",
           render(template: 'problems/index.json.jbuilder'),
           prerender: false %>
     </div>
   </div>
-  <div class="row text-center">
-    <div class="col-xs-12">
-      <%= link_to "Back", :back, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
-    </div>
-  </div>
+
 </div>
+

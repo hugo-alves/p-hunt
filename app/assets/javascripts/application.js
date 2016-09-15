@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require facebook
 //= require react
+//= require materialize-sprockets
 //= require react_ujs
 //= require components
 //= require_tree .

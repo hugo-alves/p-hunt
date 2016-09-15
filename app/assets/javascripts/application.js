@@ -19,5 +19,4 @@
 //= require material
 //= require components
 //= require_tree .
-//= require material
 

@@ -1,0 +1,31 @@
+<%= form_for Problem.new do |p| %>
+  <div class="row">
+    <div class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <%= p.text_field :name%>
+          <%= p.label :name %>
+        </div>
+        <div class="input-field col s6">
+          <%= p.text_field :email %>
+          <%= p.label :email %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= p.text_field :title, class: "validate" %>
+          <%= p.label :title %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= p.text_area :description,class: "materialize-textarea" %>
+          <%= p.label :description %>
+        </div>
+      </div>
+      <%= p.submit class:"btn waves-effect waves-light" %>
+    </div>
+  </div>
+  <div>
+  </div>
+<% end %>

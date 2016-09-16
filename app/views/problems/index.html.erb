@@ -1,12 +1,28 @@
-<%= image_tag("problems.jpg", :class => "img_problems") %>
-<div class="box">
-  <div class="mdl-grid">
-    <div class="mdl-cell--12-col">
-      <%= react_component "ProblemList",
-          render(template: 'problems/index.json.jbuilder'),
-          prerender: false %>
+<div class="container">
+  <div class="row">
+    <div class="col s12 l12">
+      <h1 class="center-align">What's your problem?</h1>
+        <p>
+          Tell us a problem and maybe we can solve it for you.
+        </p>
+        <a class="btn-floating btn-large waves-effect waves-light red cente" id="form-btn"s><i class="material-icons">add</i></a>
+        <div class="hide" id="hidden-form">
+          <%= render 'form' %>
+      </div>
     </div>
   </div>
-
 </div>
 
+
+<%= image_tag("problems.jpg", :class => "img_problems") %>
+<%= react_component "ProblemList",
+    render(template: 'problems/index.json.jbuilder'),
+    prerender: false %>
+
+<% content_for(:after_js) do %>
+<script>
+$("#form-btn").on("click", function() {
+  $('#hidden-form').toggleClass("hide");
+});
+</script>
+<% end %>

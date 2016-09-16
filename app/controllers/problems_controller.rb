@@ -16,7 +16,7 @@ class ProblemsController < ApplicationController
   def create
     @problem = Problem.new(problem_params)
     @problem.save
-    redirect_to problems_path
+    redirect_to problem_path(@problem)
   end
 
   def upvote

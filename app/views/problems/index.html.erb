@@ -5,16 +5,24 @@
         <p>
           Tell us a problem and maybe we can solve it for you.
         </p>
-      <%= render 'form' %>
+        <a class="btn-floating btn-large waves-effect waves-light red cente" id="form-btn"s><i class="material-icons">add</i></a>
+        <div class="hide" id="hidden-form">
+          <%= render 'form' %>
+      </div>
     </div>
   </div>
 </div>
 
 
 <%= image_tag("problems.jpg", :class => "img_problems") %>
-<div class="container">
-  <%= react_component "ProblemList",
-      render(template: 'problems/index.json.jbuilder'),
-      prerender: false %>
-</div>
+<%= react_component "ProblemList",
+    render(template: 'problems/index.json.jbuilder'),
+    prerender: false %>
 
+<% content_for(:after_js) do %>
+<script>
+$("#form-btn").on("click", function() {
+  $('#hidden-form').toggleClass("hide");
+});
+</script>
+<% end %>

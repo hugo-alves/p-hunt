@@ -7,6 +7,7 @@ var Upvote = React.createClass({
 
   render: function() {
     var divClasses = classNames({
+      "secondary-content": true,
       "problem-upvote": true,
       "problem-upvote-upvoted": this.state.problem.up_voted
     });

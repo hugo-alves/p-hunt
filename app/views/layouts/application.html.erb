@@ -13,5 +13,13 @@
 <%= yield %>
 
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+<script>
+$(document).ready(function() {
+  $('.collapsible').on("click", function() {
+    $(this).toggleClass("active");
+  });
+});
+</script>
 </body>
 </html>

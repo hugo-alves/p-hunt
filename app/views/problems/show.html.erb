@@ -6,7 +6,7 @@
         <p class="description"><%= @problem.description %></p>
         <p class="author">Author: <%= @problem.name %></p>
         <a href="https://www.facebook.com/sharer/sharer.php?u=<%= request.original_url %>" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
-        <a href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" title="Share via Whatsapp" target="_blank" class="btn btn-whatsapp"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+        <a href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" title="Share via Whatsapp" target="_blank" class="btn btn-whatsapp hide-on-med-and-up"><i class="fa fa-whatsapp hide-on-med-and-up"></i> WhatsApp</a>
         <a href="http://twitter.com/home?status=This is a real problem:<%= @problem.title %>! Take a look on <%=request.original_url%>" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
         <br />
         <%= link_to "Back", :back, class: "btn waves-effect waves-light red lighten-2", style:"margin-top: 15px;" %>

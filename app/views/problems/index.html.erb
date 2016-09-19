@@ -1,7 +1,7 @@
 <div class="container">
-<%= image_tag("problems.jpg", :class => "img_problems") %>
+<%= image_tag("problems.jpg", :class => "img_problems responsive-img") %>
   <div class="row">
-    <div class="col s12 l12">
+    <div class="col s12 l12" style="text-align: center">
       <h1 class="center-align title">What's your problem?</h1>
         <p>
           We are a group of Web developers looking for problems to solve.
@@ -9,7 +9,7 @@
         <p>
            If there's any problem that you think that Tech can solve, please tell us and maybe we can solve it for you.
         </p>
-        <a class="btn-floating btn-large waves-effect waves-light red cente" id="form-btn"s><i class="material-icons">add</i></a>
+        <a class="waves-effect waves-light btn" ><i class="material-icons left">add</i>I have a problem!</a>
         <div class="hide" id="hidden-form">
           <%= render 'form' %>
       </div>

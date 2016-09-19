@@ -1,19 +1,17 @@
 <div class="show-wrapper">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-6 col-md-offset-3">
-        <h1><%= @problem.title %></h1>
+      <div class="col s12">
+        <h1 class="title"><%= @problem.title %></h1>
         <p class="description"><%= @problem.description %></p>
         <p class="author">Author: <%= @problem.name %></p>
         <a href="https://www.facebook.com/sharer/sharer.php?u=<%= request.original_url %>" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
         <a href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" title="Share via Whatsapp" target="_blank" class="btn btn-whatsapp"><i class="fa fa-whatsapp"></i> WhatsApp</a>
         <a href="http://twitter.com/home?status=This is a real problem:<%= @problem.title %>! Take a look on <%=request.original_url%>" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
-
-  <!-- Comment Plugin comment-box -->
-        <div id="fb-root"></div>
-        <div class="fb-comments" data-href="https://problem-hunter.herokuapp.com"></div>
-        <%= link_to "Back", :back, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+        <br />
+        <%= link_to "Back", :back, class: "btn waves-effect waves-light red lighten-2", style:"margin-top: 15px;" %>
       </div>
     </div>
+
   </div>
 </div>
